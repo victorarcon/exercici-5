@@ -2,28 +2,26 @@ name: exercici5
 on:
   push:
     branches: [ test ]
-
-jobs:
   compile-test-linux:
     runs-on: linux-latest
     steps:
-      - name: Descargar codigo
-      uses: actions/checkout@v6
+       - name: Descargar codigo
+         uses: actions/checkout@v6
 
-      - name: Compilar
-      run: make
+       - name: Compilar
+         run: make
 
-      - name: Provar
-      run: ./conversor c2f 100
+       - name: Provar
+         run: ./conversor c2f 100
 
   compile-test-mac:
     runs-on: macos-latest
     steps:
       - name: Descargar codigo
-      uses: actions/checkout@v6
+        uses: actions/checkout@v6
 
       - name: Compilar
-      run: make 
+        run: make 
 
       - name: Provar
-      run: ./conversor c2f 100
+        run: ./conversor c2f 100
