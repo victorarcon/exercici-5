@@ -8,24 +8,24 @@ jobs:
     runs-on: linux-latest
 
   steps:
-    -name: Descargar codigo
+    - name: Descargar codigo
     uses: actions/checkout@v6
 
-    -name: Compilar
+    - name: Compilar
     run: make
 
-    -name: Provar
+    - name: Provar
     run: ./conversor c2f 100
 
   compile-test-mac:
     runs-on: macos-latest
 
   steps:
-    -name: Descargar codigo
+    - name: Descargar codigo
     uses: actions/checkout@v6
 
-    -name: Compilar
+    - name: Compilar
     run: make 
 
-    -name: Provar
+    - name: Provar
     run: ./conversor c2f 100
