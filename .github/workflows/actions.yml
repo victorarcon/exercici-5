@@ -2,6 +2,7 @@ name: exercici5
 on:
   push:
     branches: [ test ]
+jobs:
   compile-test-linux:
     runs-on: linux-latest
     steps:
